@@ -21,8 +21,15 @@
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" th:href="@{/theme/docs/css/main.css}"  href="docs/css/main.css">
     <!-- Font-icon css-->
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 	
-    
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
+    	
+      <!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	
+	<script type="text/javascript" th:src="@{/js/layout/main.js}" src="main.js"></script>
 <title layout:title-pattern="$CONTENT_TITLE - $LAYOUT_TITLE"></title>
 <meta name="description" content="" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -100,17 +107,17 @@
       </div>
       <ul class="app-menu">
         <li><a class="app-menu__item active" th:href="@{/home/}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">หน้าหลัก</span></a></li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-users"></i><span class="app-menu__label">บุคลากร</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+        <li th:class="${activeStudents == 'true' || activeProfessor == 'true'}? 'treeview is-expanded' : treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-users"></i><span class="app-menu__label">บุคลากร</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> คณะอาจารย์</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> นิสิต</a></li>
+            <li><a th:class="${activeProfessor == 'true'}? 'treeview-item active' : 'treeview-item'" th:href="@{/professor/}"><i class="icon fa fa-circle-o"></i> คณะอาจารย์</a></li>
+            <li><a th:class="${activeStudents == 'true'}? 'treeview-item active' : 'treeview-item'" th:href="@{/students/}"><i class="icon fa fa-circle-o"></i> นิสิต</a></li>
           </ul>
         </li>
-        <li><a class="app-menu__item" href="#"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">ผลงาน</span></a></li>
+        <li><a class="app-menu__item" th:href="@{/portfolio/}"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">ผลงาน</span></a></li>
         <li><a class="app-menu__item" href="#"><i class="app-menu__icon fa fa-pie-chart"></i><span class="app-menu__label">งานกิจกรรม</span></a></li>
-         <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">การเรียนการสอน</span><i class="treeview-indicator fa fa-angle-right"></i></a>
+         <li th:class="${activeTutorial == 'true'} ? 'treeview is-expanded' : 'treeview'"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">การเรียนการสอน</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 1</a></li>
+            <li><a th:class="${activeTutorial == 'true'} ? 'treeview-item active' : 'treeview-item'" th:href="@{/tutorial/}"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 1</a></li>
             <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 2</a></li>
             <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 3</a></li>
             <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 4</a></li>
@@ -147,9 +154,21 @@
 	 <main class="app-content" >
       <div class="app-title" layout:fragment="content">
       </div>
-      </main>
+     </main>
 
    
+    <!-- Essential javascripts for application to work-->
+    <script th:src="@{/theme/docs/js/jquery-3.2.1.min.js}" src="docs/js/jquery-3.2.1.min.js"></script>
+    <script th:src="@{/theme/docs/js/popper.min.js}" src="docs/js/popper.min.js"></script>
+    <script th:src="@{/theme/docs/js/bootstrap.min.js}" src="docs/js/bootstrap.min.js"></script>
+    <script  th:src="@{/theme/docs/js/main.js}" src="docs/js/main.js"></script>
+    
+    <!-- The javascript plugin to display page loading on top-->
+    <script th:src="@{/theme/docs/js/plugins/pace.min.js}" src="docs/js/plugins/pace.min.js"></script>
+    
+    <!-- Page specific javascripts-->
+    <script type="text/javascript" th:src="@{/theme/docs/js/plugins/bootstrap-notify.min.js}" src="docs/js/plugins/bootstrap-notify.min.js"></script>
+    <script type="text/javascript" th:src="@{/theme/docs/js/plugins/sweetalert.min.js}" src="docs/js/plugins/sweetalert.min.js"></script>
     
 </body>
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org" 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+  layout:decorate="~{views/layout/main}">
+<head>
+<meta charset="UTF-8">
+<title>ผลงาน</title>
+</head>
+<body  layout:fragment="content">
+	<div class="app-title">
+	   <div>
+	      <h1><i class="fa fa-cogs" aria-hidden="true"></i> <i class="fa fa-laptop"></i> ผลงาน</h1>
+	      <p>คณะเทคโนโยลีสารสรเทศและการสื่อสารมหาวิทยาลัยพะเยา</p>
+	   </div>
+	   <ul class="app-breadcrumb breadcrumb">
+	      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+	      <li class="breadcrumb-item"><a th:href="@{/home/}">หน้าหลัก</a></li>
+	      <li class="breadcrumb-item"><span>ผลงาน</span></li>
+	   </ul>
+	</div>
+</body>
+</html>

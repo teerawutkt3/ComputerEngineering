@@ -6,14 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-@RequestMapping("home/")
-public class HomeController {
-
-	@GetMapping("/")	
-	public ModelAndView home() {
-		ModelAndView mav = new ModelAndView("views/home/index.html");
-		mav.addObject("activeHome", "true");
+@RequestMapping("/tutorial")
+public class TutorialController {
+	
+	@GetMapping("/")
+	public ModelAndView tutorialIndex() {
+		ModelAndView mav = new ModelAndView("views/tutorials/tutorialIndex.html");
+		mav.addObject("activeTutorial", "true");
 		return mav;
 	}
-	
 }
