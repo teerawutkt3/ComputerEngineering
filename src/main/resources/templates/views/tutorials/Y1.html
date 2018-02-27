@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org" 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+  layout:decorate="~{views/layout/main}">
+<head>
+<meta charset="UTF-8">
+<title>การเรียนการสอน</title>
+</head>
+<body layout:fragment="content">
+	<div class="app-title">
+	   <div>
+	      <h1><i class="fa fa-cogs" aria-hidden="true"></i> <i class="fa fa-laptop"></i> การเรียนการสอน</h1>
+	   </div>
+	   <ul class="app-breadcrumb breadcrumb">
+	      <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+	      <li class="breadcrumb-item"><a th:href="@{/home/}">หน้าหลัก</a></li>
+	      <li class="breadcrumb-item"><span>การเรียนการสอน</span></li>
+	   </ul>
+	</div>
+	<div class="row user">
+		<div class="col-md-3">
+          <div class="tile p-0">
+            <ul class="nav flex-column nav-tabs user-tabs">
+              <li class="nav-item"><a class="nav-link active" href="#user-timeline" data-toggle="tab">Data Struct</a></li>
+              <li class="nav-item"><a class="nav-link" href="#network" data-toggle="tab">Network</a></li>
+               <li class="nav-item"><a class="nav-link" href="#math" data-toggle="tab">Math</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="tab-content">
+            <div class="tab-pane active" id="user-timeline">
+              <div class="timeline-post">
+	              <div class="row">
+	              	<div class="col-md-6"> <p class="tile-title"><i class="fa fa-book" aria-hidden="true"></i> วิชา...</p></div>
+	              	<div class="col-md-6"><p class="pull-right">12 ก.พ. 2561</p></div>  
+	             </div>
+	             <p>Lec 1 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+	             <p>Leb 2 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+              </div>
+              <div class="timeline-post">
+	              <div class="row">
+	              	<div class="col-md-6"> <p class="tile-title"><i class="fa fa-book" aria-hidden="true"></i> วิชา...</p></div>
+	              	<div class="col-md-6"><p class="pull-right">12 ก.พ. 2561</p></div>  
+	             </div>
+	             <p>document 1 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+	             <p>document 2 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+	             <p>document 3 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+	             
+              </div>
+            </div>
+            <div class="tab-pane fade" id="network">
+              <div class="user-settings">
+               <div class="timeline-post">
+	              <div class="row">
+	              	<div class="col-md-6"> <p class="tile-title"><i class="fa fa-book" aria-hidden="true"></i> วิชา...</p></div>
+	              	<div class="col-md-6"><p class="pull-right">12 ก.พ. 2561</p></div>  
+	             </div>
+	             <p>Lec 1 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+	             <p>Leb 2 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+	             <p>Lac 1 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+	             <p>Lab 2 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+              </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="math">
+              <div class="user-settings">
+               <div class="timeline-post">
+	              <div class="row">
+	              	<div class="col-md-6"> <p class="tile-title"><i class="fa fa-book" aria-hidden="true"></i> วิชา...</p></div>
+	              	<div class="col-md-6"><p class="pull-right">12 ก.พ. 2561</p></div>  
+	             </div>
+	             <p>Lec 1 : <a href="#">ดาวน์โหลด  <i class="fa fa-download" aria-hidden="true"></i></a></p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+	</div>
+		
+</body>
+</html>

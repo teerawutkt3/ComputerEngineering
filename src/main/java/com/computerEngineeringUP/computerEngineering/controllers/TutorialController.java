@@ -9,9 +9,9 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/tutorial")
 public class TutorialController {
 	
-	@GetMapping("/")
+	@GetMapping("/Y1")
 	public ModelAndView tutorialIndex() {
-		ModelAndView mav = new ModelAndView("views/tutorials/tutorialIndex.html");
+		ModelAndView mav = new ModelAndView("views/tutorials/Y1.html");
 		mav.addObject("activeTutorial", "true");
 		return mav;
 	}

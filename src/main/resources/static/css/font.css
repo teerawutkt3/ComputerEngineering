@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+@font-face {
+ font-family: Quark;
+ src: url('../font/Quark/Quark-Bold.otf'),		
+ 	  url('../font/Quark/font/Kanit-Regular.ttf');	
+}
+
+body{
+	font-family: Quark;
+}
