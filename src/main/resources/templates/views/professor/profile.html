@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org" 
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" 
+  layout:decorate="~{views/layout/main}">
+<head>
+<meta charset="UTF-8">
+<title>โปรไฟล์</title>
+</head>
+<body layout:fragment="content">
+	<div class="row user">
+		 <div class="col-md-12">		 
+          <div class="profile">           
+            <div class="info">              
+           	  <img class="user-img" th:src="@{/img/user-icon/user-icon.png}">
+              <h4>ชื่ออาจารย์</h4>
+              <p>ตำแหน่ง</p>                        
+            </div>            
+            <div class="cover-image"></div>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

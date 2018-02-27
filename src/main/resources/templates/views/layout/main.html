@@ -2,8 +2,25 @@
 <html xmlns:th="http://www.thymeleaf.org"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
-
- <meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+	<link rel="apple-touch-icon" sizes="57x57" href="/img/webfavicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/img/webfavicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/img/webfavicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/img/webfavicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/img/webfavicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/img/webfavicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/img/webfavicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/img/webfavicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/img/webfavicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/img/webfavicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/img/webfavicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/img/webfavicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/img/webfavicon/favicon-16x16.png">
+	<link rel="manifest" href="/img/webfavicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	
+ 	<meta name="description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
     <!-- Twitter meta-->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:site" content="@pratikborsadiya">
@@ -86,27 +103,29 @@
             <li class="app-notification__footer"><a href="#">See all notifications.</a></li>
           </ul>
         </li>
+        
         <!-- User Menu-->
-        <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
+        <li><a class="app-nav__item" th:href="@{/home/login}"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+        <!-- <li class="dropdown"><a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu"><i class="fa fa-user fa-lg"></i></a>
           <ul class="dropdown-menu settings-menu dropdown-menu-right">
             <li><a class="dropdown-item" href="#"><i class="fa fa-cog fa-lg"></i> Settings</a></li>
             <li><a class="dropdown-item" href="#"><i class="fa fa-user fa-lg"></i> Profile</a></li>
             <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </header>
 <!-- Sidebar menu-->
     <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <aside class="app-sidebar">
-      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" th:src="@{/img/subjectLogo.png}" style="width:35px; height:50px;"alt="">
+      <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" th:src="@{/img/subject/subjectLogo.png}" style="width:30px; height:45px;"alt="">
         <div>       	  
           <p class="app-sidebar__user-name">วิศวกรรมคอมพิวเตอร์</p>
           <p class="app-sidebar__user-designation">มหาวิทยาลัยพะเยา</p>
         </div>
       </div>
       <ul class="app-menu">
-        <li><a class="app-menu__item active" th:href="@{/home/}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">หน้าหลัก</span></a></li>
+        <li><a class="app-menu__item" th:href="@{/home/}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">หน้าหลัก</span></a></li>
         <li th:class="${activeStudents == 'true' || activeProfessor == 'true'}? 'treeview is-expanded' : treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-users"></i><span class="app-menu__label">บุคลากร</span><i class="treeview-indicator fa fa-angle-right"></i></a>
           <ul class="treeview-menu">
             <li><a th:class="${activeProfessor == 'true'}? 'treeview-item active' : 'treeview-item'" th:href="@{/professor/}"><i class="icon fa fa-circle-o"></i> คณะอาจารย์</a></li>

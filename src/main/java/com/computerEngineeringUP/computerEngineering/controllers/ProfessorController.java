@@ -15,4 +15,11 @@ public class ProfessorController {
 		mav.addObject("activeProfessor", "true");
 		return mav;
 	}
+	
+	@GetMapping("/profile")
+	public ModelAndView profile() {
+		ModelAndView mav = new ModelAndView("views/professor/profile.html");
+		mav.addObject("activeProfessor", "true");
+		return mav;
+	}
 }
