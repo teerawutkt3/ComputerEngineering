@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:th="http://www.thymeleaf.org" 
+ >
 <head>
 	<meta charset="UTF-8">
 	
@@ -58,15 +60,15 @@
         <h1>Compouter Engineering</h1>
       </div>
       <div class="login-box">
-        <form class="login-form" th:action="@{/home/}">
+        <form class="login-form" th:action="@{/home/loginSubmit}" method="post">
           <h3 class="login-head"><i class="fa fa-sign-in  fa-lg fa-fw" aria-hidden="true"></i>เข้าสู่ระบบ</h3>
           <div class="form-group">
             <label class="control-label">ชื่อผู้ใช้งาน</label>
-            <input class="form-control" type="text" placeholder="อีเมลล์" autofocus>
+            <input class="form-control" type="text" th:field="${form.username}" placeholder="อีเมลล์" autofocus>
           </div>
           <div class="form-group">
             <label class="control-label">รหัสผ่าน</label>
-            <input class="form-control" type="password" placeholder="รหัส">
+            <input class="form-control" type="password" th:field="${form.password}" placeholder="รหัส">
           </div>
           <div class="form-group">
             <div class="utility">
@@ -78,7 +80,7 @@
             </div>
           </div>
           <div class="form-group btn-container">
-            <button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>เข้าสู่ระบบ</button>
+            <button type="button" class="btn btn-primary btn-block" onclick="login.onClicklogin();"><i class="fa fa-sign-in fa-lg fa-fw"></i>เข้าสู่ระบบ</button>
           </div>
         </form>
         <form class="forget-form" action="index.html">
@@ -96,5 +98,6 @@
         </form>
       </div>
     </section>
+    
 </body>
 </html>
