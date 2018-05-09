@@ -1,5 +1,7 @@
 package com.computerEngineeringUP.computerEngineering.dao.entity;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,6 +24,9 @@ public class User {
 	@Column(name = "password")
 	private String password;
 
+	@Column(name = "password_confirm")
+	private String passwordConfirm;
+
 	@Column(name = "fname")
 	private String fname;
 
@@ -36,6 +41,12 @@ public class User {
 
 	@Column(name = "fb_id")
 	private String fbId;
+
+	@Column(name = "created_date")
+	private Timestamp createdDate;
+
+	@Column(name = "updated_date")
+	private Timestamp updateDate;
 
 	public Integer getId() {
 		return id;
@@ -59,6 +70,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public String getPasswordConfirm() {
+		return passwordConfirm;
+	}
+
+	public void setPasswordConfirm(String passwordConfirm) {
+		this.passwordConfirm = passwordConfirm;
 	}
 
 	public String getFname() {
@@ -99,6 +118,22 @@ public class User {
 
 	public void setFbId(String fbId) {
 		this.fbId = fbId;
+	}
+
+	public Timestamp getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Timestamp createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public Timestamp getUpdateDate() {
+		return updateDate;
+	}
+
+	public void setUpdateDate(Timestamp updateDate) {
+		this.updateDate = updateDate;
 	}
 
 }

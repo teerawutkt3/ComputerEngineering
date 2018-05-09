@@ -51,7 +51,7 @@
 	
 	<!-- font -->
 	<link rel="stylesheet" type="text/css" th:href="@{/css/font.css}">
-<title>เข้าสู่ระบบ</title>
+<title>สมัครสมาชิก</title>
 </head>
 <body>
 	<section class="material-half-bg"><div class="cover"></div> </section>
@@ -61,28 +61,21 @@
       </div>
       <div class="login-box">
         <form class="login-form" th:action="@{/home/loginSubmit}" method="post">
-          <h3 class="login-head"><i class="fa fa-sign-in  fa-lg fa-fw" aria-hidden="true"></i>Login</h3>
+          <h3 class="login-head"><i class="fa fa-floppy-o" aria-hidden="true"></i> Register</h3>
           <div class="form-group">
-            <label class="control-label">Username</label>
-            <input class="form-control" type="text" th:field="${form.username}" placeholder="username" autofocus>
+            <input class="form-control" type="text" th:field="${form.username}" placeholder="Username..." autofocus>
           </div>
           <div class="form-group">
-            <label class="control-label">Password</label>
-            <input class="form-control" type="password" th:field="${form.password}" placeholder="password">
+            <input class="form-control" type="password" th:field="${form.password}" placeholder="Password...">
           </div>
-          <div class="form-group">
-            <div class="utility">
-              <div class="animated-checkbox">
-                <label>
-                  <input type="checkbox"><span class="label-text">จดจำรหัส</span> 
-                  <br><i class="fa fa-floppy-o" aria-hidden="true"></i> <a class="pull-right" th:href="@{/home/register}">Register</a>                
-                </label>
-              </div>              
-            </div>
+           <div class="form-group">
+            <input class="form-control" type="password" th:field="${form.passwordConfirm}" placeholder="Confirm password...">
           </div>
-         
+            <div class="form-group">
+            <input class="form-control" type="password" th:field="${form.email}" placeholder="Email...">
+          </div>
           <div class="form-group btn-container">
-            <button type="button" class="btn btn-primary btn-block" onclick="login.onClicklogin();"><i class="fa fa-sign-in fa-lg fa-fw"></i>Login</button>
+            <button type="button" class="btn btn-primary btn-block" onclick="login.onClicklogin();"><i class="fa fa-floppy-o" aria-hidden="true"></i> save</button>
           </div>
         </form>
       </div>

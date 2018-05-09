@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.computerEngineeringUP.computerEngineering.dao.vo.home.LoginFormVo;
+import com.computerEngineeringUP.computerEngineering.dao.vo.home.RegisterVo;
 
 @Controller
 @RequestMapping("/home")
@@ -30,6 +31,13 @@ public class HomeController {
 	@PostMapping("/loginSubmit")
 	public ModelAndView loginSubmit(@ModelAttribute LoginFormVo formVo) {
 		ModelAndView mav = new ModelAndView("views/home/login.html");
+		mav.addObject("form", formVo);
+		return mav;
+	}
+	
+	@GetMapping("/register")
+	public ModelAndView register(@ModelAttribute RegisterVo formVo) {
+		ModelAndView mav = new ModelAndView("views/home/register.html");
 		mav.addObject("form", formVo);
 		return mav;
 	}
