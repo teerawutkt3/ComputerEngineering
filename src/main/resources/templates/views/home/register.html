@@ -75,7 +75,10 @@
             <input class="form-control" type="password" th:field="${form.email}" placeholder="Email...">
           </div>
           <div class="form-group btn-container">
-            <button type="button" class="btn btn-primary btn-block" onclick="login.onClicklogin();"><i class="fa fa-floppy-o" aria-hidden="true"></i> save</button>
+          <div class="text-center">
+          <button type="button" class="btn btn-primary " onclick="login.onClicklogin();"><i class="fa fa-floppy-o" aria-hidden="true"></i> save</button>
+             <a th:href="@{/home/}" class="btn btn-secondary " >Cancel</a>
+          </div>           
           </div>
         </form>
       </div>

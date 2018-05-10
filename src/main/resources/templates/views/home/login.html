@@ -63,15 +63,13 @@
         <form class="login-form" th:action="@{/home/loginSubmit}" method="post">
           <h3 class="login-head"><i class="fa fa-sign-in  fa-lg fa-fw" aria-hidden="true"></i>Login</h3>
           <div class="form-group">
-            <label class="control-label">Username</label>
             <input class="form-control" type="text" th:field="${form.username}" placeholder="username" autofocus>
           </div>
           <div class="form-group">
-            <label class="control-label">Password</label>
             <input class="form-control" type="password" th:field="${form.password}" placeholder="password">
           </div>
-          <div class="form-group">
-            <div class="utility">
+          <div class="form-group ">
+            <div class="utility col-md-6">
               <div class="animated-checkbox">
                 <label>
                   <input type="checkbox"><span class="label-text">จดจำรหัส</span> 
@@ -83,6 +81,7 @@
          
           <div class="form-group btn-container">
             <button type="button" class="btn btn-primary btn-block" onclick="login.onClicklogin();"><i class="fa fa-sign-in fa-lg fa-fw"></i>Login</button>
+            <a th:href="@{/home/}" class="btn btn-secondary btn-block" >Cancel</a>
           </div>
         </form>
       </div>

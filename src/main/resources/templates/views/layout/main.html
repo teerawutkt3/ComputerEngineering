@@ -135,9 +135,9 @@
             <li ><a class="app-menu__item" href="#" ><i class="fa fa-address-card" aria-hidden="true"></i><span class="app-menu__label">&nbsp;นิสิต</span></a>
 	          <ul class="treeview-menu treeview">
 	            <li><a th:class="${activeStudentsy1 == 'true'}? 'treeview-item active' : 'treeview-item'" th:href="@{/students/y1/}"><i class="icon fa fa-circle-o"></i>ชั้นปีที่ 1</a></li>
-	            <li><a th:class="${activeStudentsy2 == 'true'}? 'treeview-item active' : 'treeview-item'" th:href="@{/students/y2/}"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 2</a></li>
-	            <li><a th:class="${activeStudentsy3 == 'true'}? 'treeview-item active' : 'treeview-item'" th:href="@{/students/y3/}"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 3</a></li>
-	            <li><a th:class="${activeStudentsy4 == 'true'}? 'treeview-item active' : 'treeview-item'" th:href="@{/students/y4/}"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 4</a></li>
+	            <li><a th:class="${activeStudentsy2 == 'true'}? 'treeview-item active' : 'treeview-item'" href="#"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 2</a></li>
+	            <li><a th:class="${activeStudentsy3 == 'true'}? 'treeview-item active' : 'treeview-item'" href="#"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 3</a></li>
+	            <li><a th:class="${activeStudentsy4 == 'true'}? 'treeview-item active' : 'treeview-item'" href="#"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 4</a></li>
 	          </ul>
 	        </li>
            <!--  <li><a th:class="${activeStudents == 'true'}? 'treeview-item active' : 'treeview-item'" th:href="@{/students/}"><i class="icon fa fa-circle-o"></i> นิสิต</a></li> -->
@@ -153,32 +153,8 @@
             <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> ชั้นปีที่ 4</a></li>
           </ul>
         </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-edit"></i><span class="app-menu__label">Forms</span><i class="treeview-indicator fa fa-angle-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Form Components</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Custom Components</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Form Samples</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Form Notifications</a></li>
-          </ul>
-        </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-th-list"></i><span class="app-menu__label">Tables</span><i class="treeview-indicator fa fa-angle-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Basic Tables</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Data Tables</a></li>
-          </ul>
-        </li>
-        <li class="treeview"><a class="app-menu__item" href="#" data-toggle="treeview"><i class="app-menu__icon fa fa-file-text"></i><span class="app-menu__label">Pages</span><i class="treeview-indicator fa fa-angle-right"></i></a>
-          <ul class="treeview-menu">
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Blank Page</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Login Page</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Lockscreen Page</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> User Page</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Invoice Page</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Calendar Page</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Mailbox</a></li>
-            <li><a class="treeview-item" href="#"><i class="icon fa fa-circle-o"></i> Error Page</a></li>
-          </ul>
-        </li>
+        <li><a class="app-menu__item" href="#"><i class="fa fa-file-text-o" aria-hidden="true"></i><span class="app-menu__label">&nbsp;งานธรุการ</span></a></li>
+
       </ul>
     </aside>
 	 <main class="app-content" >
